@@ -1,0 +1,148 @@
+// Przycisk dodawania
+
+.btn_sum {
+  width: 26px;
+  height: 26px;
+  background-color: green;
+  border: 1px solid lighten(green, 5%);
+  border-radius: 6px;
+  padding-left: 4px;
+  margin-top: 20px;
+  float: right;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(green, 5%);
+  }
+
+  &:active, &:focus {
+    -moz-outline: none;
+    outline: none; /* CSS 3 */
+    ie-dummy: expression(this.hideFocus=true);
+  }
+
+  &:active {
+    border: 1px solid white;
+  }
+}
+
+.fa-close {
+  color: white;
+  transform: rotate(45deg);
+}
+
+//----------OGÓLNY-------------
+
+.schedule__container {
+  width: 800px;
+  height: 500px;
+  border: 2px solid lighten($sidePanelNavColor, 40%);
+  margin: 0 auto;
+
+  .schedule__element {
+    width: 85%;
+    height: 10%;
+    margin: 0 auto;
+    border-bottom: 2px solid lighten($sidePanelNavColor, 40%);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-family: "Open Sans", sans-serif;
+    color: $buttonsColor;
+  }
+
+//----------LISTA-------------
+
+  .list__container {
+    width: 95%;
+    margin-left: 20px;
+  }
+
+  .title_list {
+    width: 80%;
+    display: inline-flex;
+    border-top: 1px solid #D2D2D1;
+    color: #6E7371;
+    font-weight: 700;
+    margin: 15px auto;
+    margin-left: 60px;
+    padding-top: 5px;
+    text-transform: uppercase;
+  }
+
+  .id {
+  width: 5%;
+  text-align: justify;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+
+  .name_li {
+    width: 25%;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .description {
+    width: 50%;
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.7rem;
+  }
+
+  .weeks {
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .actions {
+    width: 15%;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ul_schedule_list {
+    list-style-type: none;
+    overflow-y: scroll;
+    height: 330px;
+
+    li {
+      color: #6E7371;
+      display: inline-flex;
+      width: 90%;
+      border-top: 1px solid #D2D2D1;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-right: 10px;
+
+      .fa-trash-alt {
+        color: $binIconColor;
+      }
+
+      .fa-edit {
+        color: $warningMessageColor;
+      }
+
+      .btn_actions {
+        border: 1px solid white;
+
+
+        &:active, &:focus {
+          -moz-outline: none;
+          outline: none; /* CSS 3 */
+          ie-dummy: expression(this.hideFocus=true);
+        }
+
+        &:active {
+          border: 1px dotted black;
+        }
+      }
+    }
+  }
+}
