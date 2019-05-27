@@ -1,1 +1,38 @@
+.main-view-header{
+  width: 100%;
+  background-color: $headerColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo{
+    font-family: charmonman, sans-serif;
+    .logo__first_element{
+      color: $logoMainColor;
+    }
+    .logo__second_element{
+      color: $logoAlternativeColor;
+    }
+  }
+  .user-info{
+    font-family: open_sans, sans-serif;
+    .user-info__name{
+    }
+    .user-info__photo{
+      color: $logoAlternativeColor
+    }
+  }
+}
+
+.nav{
+  background-color: $sidePanelNavColor;
+  width: 17%;
+  height: 100vh;
+  .nav__element{
+    width: 100%;
+    display: inline-block;
+    color: white;
+    font-family: open_sans, sans-serif;
+  }
+}
+
 
