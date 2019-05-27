@@ -116,7 +116,7 @@
     height: 420px;
 
     li {
-      color: #6E7371;
+      color: lighten(#6E7371, 20%);
       display: inline-flex;
       //width: 90%;
       border-top: 1px solid #D2D2D1;
@@ -148,11 +148,11 @@
       }
 
       .btn_trash {
-        margin-right: 12px;
+        margin-right: 4px;
       }
 
       .btn_edit {
-        margin-right: 4px;
+        margin-right: 12px;
       }
     }
   }
