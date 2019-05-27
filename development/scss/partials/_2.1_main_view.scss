@@ -5,7 +5,9 @@
   align-items: center;
   justify-content: space-between;
   .logo{
+    margin: 10px 15px;
     font-family: charmonman, sans-serif;
+    font-size: 2rem;
     .logo__first_element{
       color: $logoMainColor;
     }
@@ -15,24 +17,44 @@
   }
   .user-info{
     font-family: open_sans, sans-serif;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
     .user-info__name{
+      font-size: 1.5rem;
+      margin: auto 20px;
+      color: white;
     }
     .user-info__photo{
-      color: $logoAlternativeColor
+      font-size: 2.5rem;
+      color: $logoAlternativeColor;
     }
   }
 }
 
-.nav{
-  background-color: $sidePanelNavColor;
-  width: 17%;
-  height: 100vh;
-  .nav__element{
-    width: 100%;
-    display: inline-block;
-    color: white;
-    font-family: open_sans, sans-serif;
+.main-section{
+display: flex;
+  .nav{
+    background-color: $sidePanelNavColor;
+    width: 17%;
+    height: 100vh;
+    .nav__element{
+      width: 100%;
+      display: inline-block;
+      color: $logoMainColor;
+      font-family: open_sans, sans-serif;
+      font-weight: bold;
+      padding: 10px 0 10px 10px;
+    }
   }
+
+  .content-container{
+    width: 100%;
+    height: auto;
+    background-image: url("../../images/background.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
 }
-
-
