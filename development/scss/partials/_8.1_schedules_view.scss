@@ -34,7 +34,7 @@
 //----------OGÓLNY-------------
 
 .schedule__container {
-  width: 800px;
+  width: 900px;
   height: 500px;
   border: 2px solid lighten($sidePanelNavColor, 40%);
   margin: 0 auto;
@@ -70,6 +70,9 @@
     margin-left: 70px;
     padding-top: 5px;
     text-transform: uppercase;
+    .description {
+      font-size: 1rem;
+    }
   }
 
   .id {
@@ -110,7 +113,7 @@
   .ul_schedule_list {
     list-style-type: none;
     overflow-y: scroll;
-    height: 330px;
+    height: 350px;
 
     li {
       color: #6E7371;
