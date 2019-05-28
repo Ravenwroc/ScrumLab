@@ -5,6 +5,7 @@
 // https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 
 @import "../fonts/stylesheet.css";
+@import "modules/reset";
 @import "modules/colors";
 @import "./partials/reset";
 @import "./partials/2.1_main_view";
