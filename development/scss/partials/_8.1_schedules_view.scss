@@ -6,8 +6,7 @@
   background-color: green;
   border: 1px solid lighten(green, 5%);
   border-radius: 6px;
-  padding-left: 4px;
-  margin-top: 20px;
+  margin-top: 27px;
   float: right;
 
   &:hover {
@@ -37,7 +36,9 @@
   width: 1000px;
   height: 600px;
   border: 2px solid lighten($sidePanelNavColor, 40%);
-  margin: 30px auto;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 30px;
 
   .schedule__element {
     width: 85%;
@@ -46,6 +47,10 @@
     border-bottom: 2px solid lighten($sidePanelNavColor, 40%);
     display: flex;
     justify-content: space-between;
+  }
+
+  span {
+    margin-top: 30px;
   }
 
   h1 {
@@ -57,17 +62,17 @@
 
   .list__container {
     width: 87%;
-    margin-left: 50px;
+    margin-left: 70px;
   }
 
   .title_list {
-    width: 80%;
+    width: 85%;
     display: inline-flex;
     border-top: 1px solid #D2D2D1;
     color: #6E7371;
     font-weight: 700;
     margin: 15px auto;
-    margin-left: 90px;
+    margin-left: 66px;
     padding-top: 5px;
     text-transform: uppercase;
     .description {
