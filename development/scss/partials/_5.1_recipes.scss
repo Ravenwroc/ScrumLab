@@ -1,0 +1,86 @@
+.recipes {
+  width: 1069px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'open_sans', sans-serif;
+  background-color: $screensBackgroundColor;
+  border: 1px dashed $tableTextColor;
+  .recipes__header {
+    width: 100%;
+    border-bottom: 2px solid $tableTextColor;
+    display: flex;
+    justify-content: space-between;
+    .recipes__title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $buttonsColor;
+    }
+  }
+  .recipes__content {
+    height: 453px;
+    overflow-y: scroll;
+  }
+  .recipes__table {
+    list-style: none;
+    margin-top: 10px;
+    border-top: 1px solid $tableTextColor;
+    width: 1000px;
+  }
+  .recipes__row {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid $tableTextColor;
+    color: $tableTextColor;
+    &--header {
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $sidePanelNavColor;
+    }
+    .recipes__box {
+      padding: 0 10px;
+      &--id {
+        flex-basis: 5%;
+      }
+      &--name {
+        flex-basis: 25%;
+      }
+      &--description {
+        flex-basis: 60%;
+        text-align: justify;
+      }
+      &--actions {
+        flex-basis: 10%;
+      }
+    }
+  }
+}
+//buttons
+.recipes__btn {
+  font-size: 1.75rem;
+  color: $successMessageColor;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.btn__edit {
+  font-size: 1.2rem;
+  color: $warningMessageColor;
+  border: none;
+  margin-right: 5px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.btn__trash {
+  font-size: 1.2rem;
+  color: $binIconColor;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
