@@ -1,0 +1,63 @@
+%elementMargin {
+  margin-bottom: 15px;
+}
+
+.messageAndForm {
+  margin: 30px 40px 30px 40px;
+  padding: 60px 20px 60px 20px;
+  height: 629px;
+  display: flex;
+  justify-content: center;
+  font-family: 'open_sans', serif;
+  border: dashed 1px $tableTextColor;
+
+  #enterName {
+    width: 400px;
+    text-align: center;
+    color: $sidePanelNavColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    span {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      @extend %elementMargin;
+    }
+
+    p:nth-of-type(1) {
+      font-size: 24px;
+      font-weight: bold;
+      @extend %elementMargin;
+    }
+
+    .nameInput {
+      margin-bottom: 10px;
+      width: 300px;
+      background-color: white;
+      @extend %elementMargin;
+    }
+
+    .readyButton {
+      background-color: $buttonsColor;
+      border: none;
+      font-weight: bold;
+      padding: 6px 12px 6px 12px;
+      color: white;
+      @extend %elementMargin;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p:nth-of-type(2) {
+      font-size: 20px;
+      font-weight: bold;
+      @extend %elementMargin;
+    }
+  }
+}

@@ -1,1 +1,102 @@
+.main-view-header{
+  width: 100%;
+  background-color: $headerColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo{
+    margin: 10px 15px;
+    font-family: charmonman, sans-serif;
+    font-size: 2rem;
+    .logo__first_element{
+      color: $logoMainColor;
+    }
+    .logo__second_element{
+      color: $logoAlternativeColor;
+    }
+    &:hover{
+      cursor: default;
+    }
+  }
+  .user-info{
+    font-family: open_sans, sans-serif;
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    .user-info__name{
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: auto 20px;
+      color: white;
+      &:hover{
+        cursor: default;
+      }
+    }
+    .user-info__photo{
+      font-size: 2.5rem;
+      color: $buttonsColor;
+    }
+  }
+}
 
+.main-section{
+display: flex;
+  .nav{
+    background-color: $sidePanelNavColor;
+    width: 17%;
+    height: 100vh;
+    .nav__element{
+      width: 100%;
+      display: inline-block;
+      color: $logoMainColor;
+      font-family: open_sans, sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 20px 15px;
+      //margin: 15px 0;
+      opacity: 0.8;
+      position: relative;
+      &:before{
+        content: '';
+        height: 0;
+        width: 4px;
+        background-color: $buttonsColor;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: height 600ms;
+      }
+      &:hover:before{
+        height: 100%;
+      }
+      &:hover{
+        opacity: 1;
+      }
+      &:hover .nav__arrow{
+      visibility: visible;
+      }
+      .nav__arrow{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $buttonsColor;
+        visibility: hidden;
+      }
+    }
+
+  }
+
+  .content-container{
+    width: 100%;
+    height: auto;
+    background-image: url("../images/background.png");
+    background-size: 30%;
+    background-position: center;
+    background-repeat: repeat;
+
+  }
+
+}
