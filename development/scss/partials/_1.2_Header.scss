@@ -8,10 +8,7 @@
     overflow: hidden;
     width: 100%;
     background-color: #4a4a49;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
     letter-spacing: 1px;
     font-size: 14px;
     h1 {
@@ -28,10 +25,12 @@
     }
     .navigation__list {
         font-family: 'Open-sans', 'Helvetica', sans-serif;
-        display: flex;
         text-transform: uppercase;
         list-style: none;
+        float: right;
+        vertical-align: middle;
         li {
+            display: inline;
             margin-right: 100px;
             white-space: nowrap;
             a {
@@ -44,4 +43,3 @@
     }
 }
 }
-
