@@ -1,51 +1,86 @@
-.main-view-header{
+.infoBox {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  right: -20px;
+  top: 50px;
+  border: 2px solid #DCC600;
+  background-color: #FFF484;
+  margin: 0 auto 15px;
+  text-align: center;
+  padding: 20px;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px;
+  content: "Usuń swoje imię";
+}
+
+.main-view-header {
   width: 100%;
   background-color: $headerColor;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .logo{
+
+  .logo {
     margin: 10px 15px;
     font-family: charmonman, sans-serif;
     font-size: 2rem;
-    .logo__first_element{
+
+    .logo__first_element {
       color: $logoMainColor;
     }
-    .logo__second_element{
+
+    .logo__second_element {
       color: $logoAlternativeColor;
     }
-    &:hover{
+
+    &:hover {
       cursor: default;
     }
   }
-  .user-info{
+
+  .user-info {
     font-family: open_sans, sans-serif;
     margin: 0 50px;
     display: flex;
     align-items: center;
-    .user-info__name{
+
+    .user-info__name {
       font-size: 1.5rem;
       font-weight: bold;
       margin: auto 20px;
       color: white;
-      &:hover{
+
+      &:hover {
         cursor: default;
       }
     }
-    .user-info__photo{
+
+    .user-info__photo {
       font-size: 2.5rem;
       color: $buttonsColor;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        color: darkred;
+      }
+
     }
+
   }
 }
 
-.main-section{
-display: flex;
-  .nav{
+.main-section {
+  display: flex;
+
+  .nav {
     background-color: $sidePanelNavColor;
     width: 17%;
     height: 100vh;
-    .nav__element{
+
+    .nav__element {
       width: 100%;
       display: inline-block;
       color: $logoMainColor;
@@ -57,7 +92,8 @@ display: flex;
       //margin: 15px 0;
       opacity: 0.8;
       position: relative;
-      &:before{
+
+      &:before {
         content: '';
         height: 0;
         width: 4px;
@@ -67,16 +103,21 @@ display: flex;
         top: 0;
         transition: height 600ms;
       }
-      &:hover:before{
+
+      &:hover:before {
         height: 100%;
       }
-      &:hover{
+
+      &:hover {
         opacity: 1;
+        cursor: pointer;
       }
-      &:hover .nav__arrow{
-      visibility: visible;
+
+      &:hover .nav__arrow {
+        visibility: visible;
       }
-      .nav__arrow{
+
+      .nav__arrow {
         position: absolute;
         right: 5px;
         top: 50%;
@@ -89,7 +130,7 @@ display: flex;
 
   }
 
-  .content-container{
+  .content-container {
     width: 100%;
     height: auto;
     background-image: url("../images/background.png");

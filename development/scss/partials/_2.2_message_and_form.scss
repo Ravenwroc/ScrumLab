@@ -2,24 +2,35 @@
   margin-bottom: 15px;
 }
 
+.hidden{
+  visibility: hidden;
+}
+
+.notDisplayed{
+  display: none;
+}
+
+
 .messageAndForm {
-  margin: 30px 40px 30px 40px;
+  margin: 30px 40px 0 40px;
   padding: 60px 20px 60px 20px;
-  height: 629px;
+  height: 600px;
   display: flex;
   justify-content: center;
   font-family: 'open_sans', serif;
   border: dashed 1px $tableTextColor;
+  background-color: white;
 
   #enterName {
     width: 400px;
     text-align: center;
     color: $sidePanelNavColor;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
+    display: flex;
+
 
     span {
       font-size: 32px;
