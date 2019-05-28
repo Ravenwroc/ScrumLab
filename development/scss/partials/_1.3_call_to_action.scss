@@ -1,0 +1,36 @@
+.redirect-section {
+  width: 100%;
+  background-color: $sidePanelNavColor;
+
+  .redirect-content-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $screensBackgroundColor;
+    font-family: open_sans, sans-serif;
+    font-size: 24px;
+    .app-description{
+      width: 66%;
+      .app-description__header{
+        margin-bottom: 20px;
+        font-size: 36px;
+        font-weight: normal;
+      }
+    }
+    .redirect-content-container__link{
+      padding: 10px 50px;
+      background-color: $buttonsColor;
+      text-decoration: none;
+      color: $screensBackgroundColor;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+
+    }
+  }
+}
+
+
