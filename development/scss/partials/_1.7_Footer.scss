@@ -1,0 +1,76 @@
+.footer_container {
+    color: $logoMainColor;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Open-sans', 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+    background-color: $sidePanelNavColor;
+    display: flex;
+    justify-content: space-around;
+    .footer_container__element {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        margin: 60px 30px 60px 30px;
+    h2 {
+        font-weight: 300;
+    }
+    
+    div, ul {
+        margin-top: 20px;
+    }
+
+    label {    
+        input {
+            height: 24px;
+            border: none
+        }
+        button {
+            margin-top: 20px;
+            color:$logoMainColor;
+            width:90px;
+            font-size: 15px;
+            background-color:$buttonsColor;
+            padding-top: 1px;
+            padding-bottom: 5px;
+            text-align: center;
+            border: none;
+        }
+    }
+
+    .aligned {
+        margin: 20px 0 0 17px;
+    }
+
+    ul:first-of-type li{
+        margin-top: 5px;
+    }
+
+    .media_elements {
+        list-style: none;
+        display: flex;
+    }
+    .media_elements li:nth-of-type(2) {
+        margin-left: 20px;
+    }
+    .media_elements li:nth-of-type(3) {
+        margin-left: 20px;
+    }
+    }
+}
+
+
+
+.copyright {
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Open-sans', 'Helvetica', sans-serif;
+    background-color: $headerColor;
+    color: $logoMainColor;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: center;
+    span {
+        color: $buttonsColor;
+    }
+}
