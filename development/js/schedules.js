@@ -33,3 +33,17 @@ userInfo.addEventListener("click", function () {
 
 })
 checkName();
+
+let btnAll = document.querySelectorAll(".btn_trash");
+console.log(btnAll);
+let tableList = document.querySelector(".ul_schedule_list");
+console.log(tableList);
+
+btnAll.forEach(function(element) {
+
+    element.addEventListener("click", function () {
+
+        tableList.removeChild(this.parentElement.parentElement);
+
+    })
+})
