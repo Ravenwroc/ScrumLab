@@ -1,0 +1,35 @@
+.no-display *{
+  display: none;
+}
+
+.add-recipe-form{
+  background-color: $screensBackgroundColor;
+  border: 1px dashed rgb(161, 161, 148);
+  width: auto;
+  margin: 30px;
+  padding: 20px;
+
+  .recipe-form-header{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid rgb(203, 203, 203);
+    font-family: open_sans, sans-serif;
+
+    .recipe-form-header__title{
+
+      font-weight: bold;
+      color: $buttonsColor ;
+    }
+
+    .recipe-form-header__submit{
+      text-decoration: none;
+      padding: 5px 10px;
+      background-color: $buttonsColor;
+      color: white;
+      margin-bottom: 5px;
+    }
+  }
+}
+
