@@ -28,9 +28,12 @@
 
 
     <nav class="nav">
-        <a class="nav__element desktop" href="./app.html"><span>Pulpit </span><i class="nav__arrow fas fa-chevron-right"></i></a>
-        <a class="nav__element recipes" href="./recipes.html"><span>Przepisy</span><i class="nav__arrow fas fa-chevron-right"></i></a>
-        <a class="nav__element plans" href="./schedules.html"><span>Plany</span><i class="nav__arrow fas fa-chevron-right"></i></a>
+        <a class="nav__element desktop" href="./app.html"><span>Pulpit </span><i
+                class="nav__arrow fas fa-chevron-right"></i></a>
+        <a class="nav__element recipes" href="./recipes.html"><span>Przepisy</span><i
+                class="nav__arrow fas fa-chevron-right"></i></a>
+        <a class="nav__element plans" href="./schedules.html"><span>Plany</span><i
+                class="nav__arrow fas fa-chevron-right"></i></a>
     </nav>
 
     <section class="content-container">
@@ -46,12 +49,89 @@
                 <p>Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)</p>
             </form>
         </section>
-        <section class="extraStuff">
-            <a href="./addplan.html"><button class="btn_addPlan"><i class="far fa-plus-square"></i><p>dodaj plan</p></button></a>
+        <section class="dashboard">
+            <div class="dashboardHeader">
+                <div class="dashboardButtons">
+                    <a href="./addplan.html">
+                        <button class="btn_addPlan"><i class="far fa-plus-square"></i>
+                            <p>dodaj plan</p>
+                        </button>
+                    </a>
+                </div>
+                <div class="dashboardNotifications">
+                    <!--                    put notifications here-->
+                </div>
+            </div>
+            <div class="dashboardWeekView">
+
+                <table>
+                    <caption>Twój plan na {nr_tygodnia} tydzień:</caption>
+                    <thead>
+                    <tr>
+                        <th>Poniedziałek</th>
+                        <th>Wtorek</th>
+                        <th>Środa</th>
+                        <th>Czwartek</th>
+                        <th>Piątek</th>
+                        <th>Sobota</th>
+                        <th>Niedziela</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                        <td>śniadanie</td>
+                    </tr>
+                    <tr>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                        <td>drugie śniadanie</td>
+                    </tr>
+                    <tr>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                        <td>zupa</td>
+                    </tr>
+                    <tr>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                        <td>drugie danie</td>
+                    </tr>
+                    <tr>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                        <td>kolacja</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="dashboardWeekViewLinks">
+                    <a href="#"><i class="fas fa-angle-double-left"></i> poprzedni</a>
+                    <a href="#">następny <i class="fas fa-angle-double-right"></i></a>
+                </div>
+            </div>
         </section>
     </section>
-
-
 
 
 </main>

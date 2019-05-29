@@ -9,7 +9,7 @@ let userInfoname = document.querySelector(".user-info__name");
 let userInfoPhoto = document.querySelector(".user-info__photo");
 let userInfonameDefault = userInfoname.innerHTML;
 let infoBox = document.querySelector(".infoBox");
-let extraStuff = document.querySelector(".extraStuff");
+let dashboard = document.querySelector(".dashboard");
 
 
 
@@ -42,11 +42,11 @@ readyButton.addEventListener("click", function storeName() {
 
 function checkName() {
     // Getting name from local storage if exist and pushing into user info in header
-    // and shows extraStuff section and links
+    // and shows dashboard section and links
     if (localStorage.getItem("savedName") != null){
         userInfoname.innerHTML = localStorage.savedName;
         messageAndForm.style.display = "none";
-        extraStuff.style.display = "flex";
+        dashboard.style.display = "flex";
         userInfoPhoto.setAttribute("title", "Usuwa imię");
 
         //Links show
@@ -57,7 +57,7 @@ function checkName() {
     }else{
         userInfoname.innerHTML = userInfonameDefault;
         messageAndForm.style.display = "flex";
-        extraStuff.style.display = "none";
+        dashboard.style.display = "none";
 
 
         //Links hide

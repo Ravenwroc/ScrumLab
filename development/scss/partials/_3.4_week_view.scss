@@ -1,0 +1,82 @@
+.dashboard {
+  width: auto;
+  height: 600px;
+  margin: 20px 40px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .dashboardHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .dashboardButtons{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .dashboardNotifications{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+  }
+
+  .dashboardWeekView{
+    margin-top: 15px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 15px 5px 15px;
+    border: dashed 1px $tableTextColor;
+    background-color: white;
+    table {
+      table-layout: fixed;
+      font-family: "Open Sans", sans-serif;
+      overflow-wrap: break-spaces;
+      border-collapse: collapse;
+      display: table;
+      font-size: 20px;
+      caption, tr{
+        border-bottom: 1px solid gray;
+      }
+      caption{
+        margin-top: 20px;
+        line-height: 35px;
+        font-weight: bold;
+        color: $buttonsColor;
+      }
+      th{
+        padding: 5px;
+        font-size: 24px;
+        color: $sidePanelNavColor;
+      }
+
+      td{
+        padding: 7px;
+        color: $tableTextColor;
+      }
+
+      td, th{
+        width: 14.2%;
+        height: 50px;
+        text-align: left;
+      }
+    }
+    .dashboardWeekViewLinks{
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      a{
+        text-decoration: none;
+        color: $buttonsColor;
+      }
+    }
+  }
+}
