@@ -1,0 +1,44 @@
+.main-width{
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.redirect-section {
+
+  background-color: $headerColor;
+
+  .redirect-content-container{
+    width: 100%;
+    margin: 0 auto;
+    //padding: 30px 0 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $screensBackgroundColor;
+    font-family: open_sans, sans-serif;
+    font-size: 24px;
+    .app-description{
+      width: 100%;
+      max-width: 824px;
+      margin: 50px 10px 80px 150px;
+      .app-description__header{
+        margin-bottom: 20px;
+        font-size: 36px;
+        font-weight: normal;
+      }
+    }
+    .redirect-content-container__link{
+      padding: 17px 50px;
+      background-color: $buttonsColor;
+      text-decoration: none;
+      color: $screensBackgroundColor;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      margin: auto 100px 105px 10px
+    }
+  }
+}
+
+

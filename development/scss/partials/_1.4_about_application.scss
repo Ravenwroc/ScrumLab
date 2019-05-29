@@ -1,0 +1,26 @@
+.features-section{
+  background-color: rgb(235, 235, 235);;
+  display: flex;
+  justify-content: center;
+  .feature-container{
+    color: $tableTextColor;
+    font-family: open_sans, sans-serif;
+    text-align: center;
+    width: 330px;
+    margin: 100px 60px;
+    &:nth-of-type(2) .feature-container__image{
+      margin-bottom: 50px;
+    }
+    .feature-container__image{
+      font-size: 100px;
+      margin-bottom: 40px;
+    }
+    .feature-container__header{
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .feature-container__description{
+      font-size: 24px;
+    }
+  }
+}
