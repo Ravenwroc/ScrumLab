@@ -1,29 +1,29 @@
-.no-display *{
+.no-display * {
   display: none;
 }
 
-.add-recipe-form{
+.add-recipe-form {
   background-color: $screensBackgroundColor;
   border: 1px dashed rgb(161, 161, 148);
   width: auto;
   margin: 30px;
   padding: 20px;
+  font-family: open_sans, sans-serif;
 
-  .recipe-form-header{
+  .recipe-form-header {
     width: auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 2px solid rgb(203, 203, 203);
-    font-family: open_sans, sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
 
-    .recipe-form-header__title{
-
-      font-weight: bold;
-      color: $buttonsColor ;
+    .recipe-form-header__title {
+      color: $buttonsColor;
     }
 
-    .recipe-form-header__submit{
+    .recipe-form-header__submit {
       text-decoration: none;
       padding: 5px 10px;
       background-color: $buttonsColor;
@@ -31,5 +31,71 @@
       margin-bottom: 5px;
     }
   }
+
+  .recipe-form-description {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .recipe-input-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 0 50px 0 5px;
+      font-size: 20px;
+      color: $tableTextColor;
+
+      .recipe-input-container__label {
+        //min-width: 30%;
+      }
+      .recipe-input-container__input {
+        min-width: 75%;
+        border: 1px solid rgb(200, 200, 200);
+        color: $headerColor;
+        resize: none;
+
+      }
+    }
+  }
+  .recipe-build{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+
+    .recipe-partials-container{
+      min-width: 48%;
+      position: relative;
+
+      .recipe-partials-container__header{
+        color: $tableTextColor;
+        font-weight: normal;
+        border-bottom: 2px solid rgb(203, 203, 203);
+        margin-bottom: 5px;
+
+      }
+      .recipe-partials-container__submit{
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        font-size: 25px;
+        color: $successMessageColor;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input{
+        min-width: 88%;
+        border: 1px solid #c8c8c8;
+        color: #4a4a49;
+      }
+      .recipe-partials-container__instructions-input{
+        resize: none;
+      }
+    }
+  }
 }
+
+
 

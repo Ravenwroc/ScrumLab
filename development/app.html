@@ -63,40 +63,45 @@
         <a class="recipe-form-header__submit" href="">Zapisz i zamknij</a>
       </div>
       <form class="recipe-form-description">
-        <label>
-          Nazwa przepisu
-          <input type="text" minlength="1" maxlength="200" required>
+
+        <label class="recipe-input-container">
+          <span class="recipe-input-container__label label-name">Nazwa przepisu</span>
+          <input class="recipe-input-container__input input-name" type="text" minlength="1" maxlength="200" required>
         </label>
-        <label>Opis przepisu
-          <textarea minlength="1" maxlength="400" rows='3' required></textarea>
+
+        <label class="recipe-input-container">
+          <span class="recipe-input-container__label label-description">Opis przepisu</span>
+          <textarea class="recipe-input-container__input input-description" minlength="1" maxlength="400" rows='3'
+                    required></textarea>
         </label>
       </form>
 
-      <div class="recipe-instruction-container">
-        <form>
-          <h3>INSTRUKCJE</h3>
-          <label>
-            <textarea minlength="1" maxlength="400" rows='3' required></textarea>
-          </label>
-        </form>
-        <i class="fas fa-plus-square"></i>
-        <ol class="recipe-instruction-container__instruction-list">
+      <div class="recipe-build">
+        <div class="recipe-partials-container">
+          <form class="recipe-instructions-container" >  <!--???-->
+            <h3 class="recipe-partials-container__header">INSTRUKCJE</h3>
+            <label>
+              <textarea class="recipe-partials-container__instructions-input" minlength="1" maxlength="400" rows='3' required></textarea>
+            </label>
+          </form>
+          <i class="recipe-partials-container__submit submit-instruction fas fa-plus-square"></i>
+          <ol class="recipe-instruction-container__instruction-list">
 
-        </ol>
+          </ol>
+        </div>
+        <div class="recipe-partials-container">
+          <form class="recipe-instructions-container">
+            <h3 class="recipe-partials-container__header">SKŁADNIKI</h3>
+            <label>
+              <input class="recipe-partials-container__ingredients-input" type="text" minlength="1" maxlength="100" required>
+            </label>
+          </form>
+          <i class="recipe-partials-container__submit submit-ingredients fas fa-plus-square"></i>
+          <ul class="recipe-ingredients-container__ingredients-list">
+
+          </ul>
+        </div>
       </div>
-      <div class="recipe-ingredients-container">
-        <form>
-          <h3>SKŁADNIKI</h3>
-          <label>
-            <textarea minlength="1" maxlength="400" rows='3' required></textarea>
-          </label>
-        </form>
-        <i class="fas fa-plus-square"></i>
-        <ul class="recipe-ingredients-container__ingredients-list">
-
-        </ul>
-      </div>
-
 
     </section>
     <!------------------KONIEC DODAWANIA PRZEPISU------------------------>
