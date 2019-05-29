@@ -1,0 +1,20 @@
+{
+  "name": "traverse",
+  "version": "1.0.0",
+  "description": "New project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: npno test specified\" && exit 1",
+    "siema": "Siemano Heniu"
+  },
+  "author": "Yanush programowania",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "jshint": "^2.10.2"
+  }
+}
