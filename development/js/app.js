@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  
-  
+
+
 let readyButton = document.querySelector(".readyButton");
 let messageAndForm = document.querySelector(".messageAndForm");
 let enterName = document.querySelector("#enterName");
@@ -93,5 +93,5 @@ checkName();
 
         })
     })
-})
 
+})
