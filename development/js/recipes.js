@@ -5,9 +5,9 @@ let userInfonameDefault = userInfoname.innerHTML;
 
 //links
 
-let desktopLink = document.querySelector(".desktop");
-let recipesLink = document.querySelector(".recipes");
-let plansLink = document.querySelector(".plans");
+let desktopLink = document.querySelector(".desktopLink");
+let recipesLink = document.querySelector(".recipesLink");
+let plansLink = document.querySelector(".plansLink");
 
 function checkName() {
     // Getting name from local storage if exist and pushing into user info in header
@@ -18,7 +18,7 @@ function checkName() {
     }else{
         userInfoname.innerHTML = userInfonameDefault;
 
-        location.href= "../app.html"
+        location.href= "./app.html";
         //
         return userInfoname.innerHTML;
     }
