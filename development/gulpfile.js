@@ -36,8 +36,6 @@ gulp.task("watch", function() {
     })
     gulp.watch("scss/**/*.scss", gulp.series("sass"));
     gulp.watch('./*.html').on('change', browserSync.reload)
-    gulp.watch('./js/*.js').on('change', browserSync.reload)
-
 
 });
 
