@@ -70,7 +70,7 @@
     margin: 5px 0;
 
     .recipe-partials-container{
-      min-width: 48%;
+      width: 48%;
       position: relative;
 
 
@@ -133,7 +133,7 @@
       .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input, {
         font-family: open_sans, sans-serif;
         color: $tableTextColor;
-        min-width: 88%;
+        min-width: 92%;
         border: 1px solid #c8c8c8;
       }
       .recipe-partials-container__instruction-edited{
