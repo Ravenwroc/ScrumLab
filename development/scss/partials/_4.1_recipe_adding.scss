@@ -3,14 +3,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 .add-recipe-form {
   background-color: $screensBackgroundColor;
   border: 1px dashed rgb(161, 161, 148);
@@ -129,10 +121,11 @@
           cursor: pointer;
         }
       }
-      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input{
+      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input, .recipe-partials-container__instructions-edit-mode{
+        font-family: open_sans, sans-serif;
+        color: $tableTextColor;
         min-width: 88%;
         border: 1px solid #c8c8c8;
-        color: #4a4a49;
       }
       .recipe-partials-container__instructions-input{
         resize: none;
