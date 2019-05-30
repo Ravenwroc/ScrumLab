@@ -1,0 +1,88 @@
+.notifications-container {
+    display: inline-block;
+    width: 550px;
+    .notifications-container_element {
+        // display: flex;
+        // align-items: center;
+        border: 2px dashed;
+        background-color: $screensBackgroundColor;
+        height: 45px;
+        margin-left: 30px;
+        font-size: 20px;
+        padding: 8px 0 10px 50px;
+        &:first-of-type {
+            margin-bottom: 20px;
+        }
+        &:last-of-type{
+            margin-top: 20px;
+        }
+        }
+    
+    .information {
+        color: $infoMessageColor;
+        border-color: $infoMessageColor;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../images/information.png);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-size: cover;
+            left:5px;
+            top:6px;
+        }
+    }
+    .warning {
+        color: $warningMessageColor;
+        border-color: $warningMessageColor;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../images/warning.png);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-size: cover;
+            left:5px;
+            top:6px;
+        }
+    }
+
+    .success {
+        color: $successMessageColor;
+        border-color: $successMessageColor;
+        position: relative;
+        &::before {
+            content: '';
+            background: url(../images/success.png);
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-size: cover;
+            left:5px;
+            top:6px;
+        }
+    }
+    .exit_notification {
+        contain: '';
+        width: 15px;
+        height: 15px;
+        display: block;
+        background-size: cover;
+        margin-top: -25px;
+        margin-left: 445px;
+        &:nth-of-type(4) {
+            background-image: url(../images/info_exit.png);
+            cursor: pointer;
+            }
+        &:nth-of-type(2) {
+            background-image: url(../images/warning_exit.png);
+            cursor: pointer;
+            }
+        &:nth-of-type(3) {
+            background-image: url(../images/success_exit.png);
+            cursor: pointer;
+            }
+        }
+}

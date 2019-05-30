@@ -96,4 +96,35 @@ checkName();
         })
     })
 
+// notifications
+
+let exitButton1 = document.querySelectorAll('.exit_notification')[0];
+let exitButton2 = document.querySelectorAll('.exit_notification')[1];
+let exitButton3 = document.querySelectorAll('.exit_notification')[2];
+//console.log(exitButton1);
+let parent = document.querySelector('.notifications-container');
+//console.log(parent);
+let children = document.querySelectorAll('.notifications-container_element');
+//console.log(children);
+
+exitButton1.addEventListener('click', function(){
+    parent.removeChild(children[0]);
+})
+
+exitButton2.addEventListener('click', function(){
+    parent.removeChild(children[1]);
+})
+
+exitButton3.addEventListener('click', function(){
+    parent.removeChild(children[2]);
+})
+
+let notificationCounter = document.querySelector('#notification_counter');
+console.log(notificationCounter);
+
+let recipesLS = localStorage.getItem('recipesLocalStorage');
+let recipes = recipesLS;
+notificationCounter.innerText = recipes;
+
+
 })
