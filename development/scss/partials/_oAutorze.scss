@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  width: 1000px;
+  height: auto;
+  padding: 100px;
+  font-family: open_sans;
+  font-size: 14px;
+  .zdjecie {
+    width: 400px;
+    height: auto;
+    background-color: gray;
+  }
+  .opis {
+    padding-left: 40px;
+  }
+}

@@ -1,0 +1,29 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  font-size: 14px;
+  background-color: $screensBackgroundColor;
+
+  .slideshow-container {
+    flex-basis: 80%;
+    .mySlides {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+  }
+  .prevSlide {
+    flex-basis: 10%;
+    cursor: pointer;
+    color: $buttonsColor;
+  }
+  .nextSlide {
+    flex-basis: 10%;
+    cursor: pointer;
+    color: $buttonsColor;
+  }
+}
