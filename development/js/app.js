@@ -95,3 +95,56 @@ checkName();
     })
 
 })
+
+//------------------------------------------
+
+let addRecipeButton = document.querySelector('.btn-add-Recipe');
+console.log(addRecipeButton);
+
+let elementsInContainer = document.querySelectorAll('.content-container> *:not(.add-recipe-form)');
+console.log(elementsInContainer);
+
+let newRecipeForm = document.querySelector('.add-recipe-form');
+let addInstructionButton = document.querySelector('.submit-instruction');
+let addIngredientsButton = document.querySelector('.submit-ingredients');
+let instructionsList = document.querySelector('.recipe-instruction-container__instruction-list');
+console.log(instructionsList);
+let ingredientsList = document.querySelector('.recipe-ingredients-container__ingredients-list');
+console.log(ingredientsList);
+
+addRecipeButton.addEventListener('click' ,function () {
+    console.log('hello');
+
+    // ukrywa zawartosc kontenera i pokazuje recipe form
+
+    for (let i = 0; i < elementsInContainer.length; i++) {
+        elementsInContainer[i].classList.toggle('no-display');
+    }
+    newRecipeForm.classList.toggle('no-display');
+
+    // dodanie funkcjonalnosci przyciskowi: nowa instruckja
+
+
+    addInstructionButton.addEventListener('click', function () {
+
+        let instructionInput = document.querySelector('.recipe-partials-container__instructions-input');
+        console.log(instructionInput);
+
+        if(instructionInput.value.length > 0 && instructionsList.children.length < 10){
+
+            let newInstructionElement = document.createElement('li');
+            newInstructionElement.innerText = instructionInput.value;
+            instructionsList.appendChild(newInstructionElement);
+            instructionInput.value = '';
+
+        }
+
+    })
+
+});
+
+
+
+console.log(addIngredientsButton, addInstructionButton);
+
+

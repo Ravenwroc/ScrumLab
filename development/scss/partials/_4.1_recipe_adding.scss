@@ -1,4 +1,4 @@
-.no-display * {
+.no-display, .no-display * {
   display: none;
 }
 
@@ -95,6 +95,48 @@
       }
     }
   }
+}
+
+
+
+//<!--Button add recipe-->
+
+.extraStuff{
+  display: inline-block;
+}
+
+.btn-add-Recipe {
+  width: 150px;
+  height: 150px;
+  border: 1px dashed $successMessageColor;
+  margin: 30px 0 0 50px;
+
+  .btn-add-Recipe__icon {
+    font-size: 60px;
+    font-weight: 100;
+    color: $successMessageColor;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    color: $successMessageColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active, &:focus {
+    -moz-outline: none;
+    outline: none; /* CSS 3 */
+    ie-dummy: expression(this.hideFocus=true);
+  }
+
+  &:active {
+    border: 2px dashed $successMessageColor;
+  }
+
 }
 
 
