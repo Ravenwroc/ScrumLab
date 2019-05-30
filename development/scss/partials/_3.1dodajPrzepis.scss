@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+.container{
+    display: flex;
+    justify-items: center;
+  align-items: center;
+  flex-direction: column;
+
+
+    .przycisk {
+      border: $successMessageColor 10px solid;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      font-size: 180px;
+      color: $successMessageColor;
+      align-items: center;
+
+        }
+
+      }
+
+
+
+
+
+
+
+
+

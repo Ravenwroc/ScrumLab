@@ -4,6 +4,10 @@
   align-items: center;
   justify-items: center;
   width: 100vw;
+  font-size: 14px;
+  background-color: $screensBackgroundColor;
+  font-family: open_sans;
+
   .slideshow-container {
     flex-basis: 80%;
     .mySlides {
@@ -16,9 +20,11 @@
   .prevSlide {
     flex-basis: 10%;
     cursor: pointer;
+    color: $buttonsColor;
   }
   .nextSlide {
     flex-basis: 10%;
     cursor: pointer;
+    color: $buttonsColor;
   }
 }
