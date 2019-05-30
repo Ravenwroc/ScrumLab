@@ -134,11 +134,38 @@ addRecipeButton.addEventListener('click' ,function () {
 
             let newInstructionElement = document.createElement('li');
             newInstructionElement.innerText = instructionInput.value;
-            newInstructionElement.innerHTML = `${instructionInput.value} <i class="recipe-partials-container__edit-icon fas fa-edit"></i><i class="recipe-partials-container__delete-icon far fa-trash-alt"></i>`;
+            newInstructionElement.innerHTML = `<span>${instructionInput.value}</span> <i class="recipe-partials-container__edit-icon fas fa-edit"></i><i class="recipe-partials-container__edit-icon--edit-mode hide fas fa-edit"></i><i class="recipe-partials-container__delete-icon far fa-trash-alt"></i>`;
             instructionsList.appendChild(newInstructionElement);
             instructionInput.value = '';
 
+            // dodanie funkcjonalnosci przyciskowi edytowania
+
+            let editInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__edit-icon');
+            editInstructionButton.addEventListener('click', function () {
+                console.log('KLIK');
+                // let editSpace = document.createElement()
+                let inputValue = this.parentElement.querySelector('span').innerText;
+                console.log(inputValue);
+                this.parentElement.innerHTML = `<input type="text"><i class="recipe-partials-container__edit-icon--edit-mode fas fa-edit"></i>`;
+
+                let editModebutton = this.parentElement.querySelector('.recipe-partials-container__edit-icon--edit-mode');
+
+                editModebutton.addEventListener('click', function () {
+
+                })
+
+
+
+            });
+
+            let deleteInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__delete-icon');
+            deleteInstructionButton.addEventListener('click', function(){
+                console.log('delete');
+                this.parentElement.remove();
+            })
         }
+
+
 
     })
 
