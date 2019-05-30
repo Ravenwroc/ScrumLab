@@ -13,20 +13,23 @@ savePlanBtn.addEventListener("click", function storeName() {
     let titlePlan = document.querySelector(".plan_title").value;
     let descriptionPlan = document.querySelector(".plan_description").value;
     let weekPlan = document.querySelector(".inp_week").value;
-    let dishPlan = document.querySelector("select").value;
+    let dishPlan = document.querySelectorAll("select");
+    console.log(dishPlan);
 
     if (titlePlan.length > 0 && descriptionPlan.length > 0 && weekPlan.length > 0) {
         addContainer.style.display = "none";
         newPlan.title = titlePlan;
         newPlan.description = descriptionPlan;
         newPlan.number = weekPlan;
-        newPlan.dishes = dishPlan;
+        dishPlan.forEach(function(element){
+          newPlan.dishes.push(element.value);
+        })
         saveRecipeToLocalStorage(newPlan);
 
-    } else if (titlePlan.length == 0 && localStorage.getItem("title") &&
-               titlePlan.length == 0 && localStorage.getItem("description") &&
-               titlePlan.length == 0 && localStorage.getItem("week")!= null) {
-        return "Exist or invalid name"
+    } else if (titlePlan.length == 0 || localStorage.getItem("title")!= null &&
+               descriptionPlan.length == 0 || localStorage.getItem("description")!= null &&
+               weekPlan.length == 0 || localStorage.getItem("week")!= null) {
+        alert("Exist or invalid name");
     }
 })
 
@@ -40,5 +43,5 @@ function saveRecipeToLocalStorage(newObject) {
     dataFromLocalStorage.push(newObject);
     localStorage.setItem("plans", JSON.stringify(dataFromLocalStorage));
   }
-  alert("Przepis zapisany do localStorage");
+  alert("Plan zapisany do localStorage");
 }
