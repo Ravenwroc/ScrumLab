@@ -74,11 +74,12 @@
 
 .main-section {
   display: flex;
+  height: auto;
 
   .nav {
     background-color: $sidePanelNavColor;
     width: 17%;
-    height: 100vh;
+    height: auto;
 
     .nav__element {
       width: 100%;

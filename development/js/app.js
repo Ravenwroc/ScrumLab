@@ -16,9 +16,9 @@ let extraStuff = document.querySelector(".extraStuff");
 
 //links
 
-let desktopLink = document.querySelector(".desktop");
-let recipesLink = document.querySelector(".recipes");
-let plansLink = document.querySelector(".plans");
+let desktopLink = document.querySelector(".desktopLink");
+let recipesLink = document.querySelector(".recipesLink");
+let plansLink = document.querySelector(".plansLink");
 
 
 
