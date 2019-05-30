@@ -101,6 +101,7 @@ console.log(elementsInContainer);
 let newRecipeForm = document.querySelector('.add-recipe-form');
 let addInstructionButton = document.querySelector('.submit-instruction');
 let addIngredientsButton = document.querySelector('.submit-ingredients');
+console.log(addIngredientsButton);
 let instructionsList = document.querySelector('.recipe-instruction-container__instruction-list');
 console.log(instructionsList);
 let ingredientsList = document.querySelector('.recipe-ingredients-container__ingredients-list');
@@ -128,23 +129,24 @@ addRecipeButton.addEventListener('click', function () {
 
       let newInstructionElement = document.createElement('li');
       newInstructionElement.innerText = instructionInput.value;
-      newInstructionElement.innerHTML = `<span>${instructionInput.value}</span> 
+      newInstructionElement.innerHTML = `<span>${instructionInput.value}</span><div>
 <i class="recipe-partials-container__edit-icon fas fa-edit" title="edit"></i>
 <i class="recipe-partials-container__edit-icon--edit-mode hide fas fa-edit" title="save"></i>
-<i class="recipe-partials-container__delete-icon far fa-trash-alt" title="delete"></i>`;
+<i class="recipe-partials-container__delete-icon far fa-trash-alt" title="delete"></i></div>`;
       instructionsList.appendChild(newInstructionElement);
       instructionInput.value = '';
 
+
       let saveInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__edit-icon--edit-mode');
       let deleteInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__delete-icon');
-
+      let editInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__edit-icon');
       // dodanie funkcjonalnosci przyciskowi edytowania
 
-      let editInstructionButton = newInstructionElement.querySelector('.recipe-partials-container__edit-icon');
       editInstructionButton.addEventListener('click', function () {
         console.log('KLIK');
+        console.log(editInstructionButton);
         // let editSpace = document.createElement()
-        let inputArea = this.parentElement.querySelector('span');
+        let inputArea = this.parentElement.parentElement.querySelector('span');
         let inputValue = inputArea.innerText;
         console.log(inputValue, inputArea);
         inputArea.innerHTML = `<input class="recipe-partials-container__instruction-edited" type="text" value="${inputValue}">`;
@@ -165,23 +167,77 @@ addRecipeButton.addEventListener('click', function () {
           deleteInstructionButton.classList.toggle('hide');
           saveInstructionButton.classList.toggle('hide');
         })
-
-
       });
 
 
       deleteInstructionButton.addEventListener('click', function () {
         console.log('delete');
-        this.parentElement.remove();
+        this.parentElement.parentElement.remove();
       })
     }
+  });
 
 
-  })
+  
+  
+  addIngredientsButton.addEventListener('click', function () {
 
+    let ingredientsInput = document.querySelector('.recipe-partials-container__ingredients-input');
+    console.log(ingredientsInput);
+
+    if (ingredientsInput.value.length > 0 && instructionsList.children.length < 20) {
+
+      let newIngredientsElement = document.createElement('li');
+      newIngredientsElement.innerText = ingredientsInput.value;
+      newIngredientsElement.innerHTML = `<span>${ingredientsInput.value}</span><div>
+<i class="recipe-partials-container__edit-icon fas fa-edit" title="edit"></i>
+<i class="recipe-partials-container__edit-icon--edit-mode hide fas fa-edit" title="save"></i>
+<i class="recipe-partials-container__delete-icon far fa-trash-alt" title="delete"></i></div>`;
+      ingredientsList.appendChild(newIngredientsElement);
+      ingredientsInput.value = '';
+
+      let saveInstructionButton = newIngredientsElement.querySelector('.recipe-partials-container__edit-icon--edit-mode');
+      let deleteInstructionButton = newIngredientsElement.querySelector('.recipe-partials-container__delete-icon');
+      let editInstructionButton = newIngredientsElement.querySelector('.recipe-partials-container__edit-icon');
+
+      console.log(saveInstructionButton, deleteInstructionButton, editInstructionButton);
+
+      editInstructionButton.addEventListener('click', function () {
+        console.log('KLIK');
+        console.log(editInstructionButton);
+        // let editSpace = document.createElement()
+        let inputArea = this.parentElement.parentElement.querySelector('span');
+        let inputValue = inputArea.innerText;
+        console.log(inputValue, inputArea);
+        inputArea.innerHTML = `<input class="recipe-partials-container__instruction-edited" type="text" value="${inputValue}">`;
+        this.classList.toggle('hide');
+        deleteInstructionButton.classList.toggle('hide');
+        saveInstructionButton.classList.toggle('hide');
+
+        // let editModebutton = this.parentElement.querySelector('.recipe-partials-container__edit-icon--edit-mode');
+
+        saveInstructionButton.addEventListener('click', function () {
+          let editedInput = inputArea.querySelector('.recipe-partials-container__instruction-edited').value;
+          console.log(editedInput);
+          inputArea.innerHTML = null;
+          console.log(inputArea);
+          console.log(inputArea.parentElement);
+          inputArea.innerText = editedInput;
+          editInstructionButton.classList.toggle('hide');
+          deleteInstructionButton.classList.toggle('hide');
+          saveInstructionButton.classList.toggle('hide');
+        })
+      });
+
+      deleteInstructionButton.addEventListener('click', function () {
+        console.log('delete');
+        this.parentElement.parentElement.remove();
+      })
+    }
+  });
 });
 
 
-console.log(addIngredientsButton, addInstructionButton);
+
 
 

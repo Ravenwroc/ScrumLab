@@ -73,6 +73,7 @@
       min-width: 48%;
       position: relative;
 
+
       .recipe-instruction-container__instruction-list, .recipe-ingredients-container__ingredients-list {
         font-size: 16px;
         color: $tableTextColor;
@@ -80,6 +81,14 @@
         margin: 10px 0;
         & li{
           margin: 5px 0;
+          width: 85%;
+
+          span{
+            overflow-wrap: break-word;
+          }
+          div{
+            display: inline-block;
+          }
         }
       }
 
@@ -121,10 +130,16 @@
           cursor: pointer;
         }
       }
-      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input, .recipe-partials-container__instruction-edited{
+      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input, {
         font-family: open_sans, sans-serif;
         color: $tableTextColor;
         min-width: 88%;
+        border: 1px solid #c8c8c8;
+      }
+      .recipe-partials-container__instruction-edited{
+        font-family: open_sans, sans-serif;
+        color: $tableTextColor;
+        width: 85%;
         border: 1px solid #c8c8c8;
       }
       .recipe-partials-container__instructions-input{
