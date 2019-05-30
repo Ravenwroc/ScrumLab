@@ -23,18 +23,25 @@ savePlanBtn.addEventListener("click", function storeName() {
     let descriptionPlan = document.querySelector(".plan_description").value;
     let weekPlan = document.querySelector(".inp_week").value;
     let dishPlan = document.querySelectorAll("select");
+    let number = parseInt(weekPlan);
     console.log(dishPlan);
 
     if (titlePlan.length > 0 && descriptionPlan.length > 0 && weekPlan.length > 0) {
-        addContainer.style.display = "none";
-        mainView.style.display = "block";
         newPlan.title = titlePlan;
         newPlan.description = descriptionPlan;
-        newPlan.number = weekPlan;
+
         dishPlan.forEach(function(element){
           newPlan.dishes.push(element.value);
         })
-        saveRecipeToLocalStorage(newPlan);
+
+        if (number > 0 && number < 53) {
+          addContainer.style.display = "none";
+          mainView.style.display = "block";
+          newPlan.number = weekPlan;
+          saveRecipeToLocalStorage(newPlan);
+        } else {
+          alert("Numer musi mieścić się w przedziale od 1 do 52");
+        }
 
     } else if (titlePlan.length == 0 || localStorage.getItem("title")!= null &&
                descriptionPlan.length == 0 || localStorage.getItem("description")!= null &&
@@ -53,5 +60,4 @@ function saveRecipeToLocalStorage(newObject) {
     dataFromLocalStorage.push(newObject);
     localStorage.setItem("plans", JSON.stringify(dataFromLocalStorage));
   }
-  alert("Plan zapisany do localStorage");
 }
