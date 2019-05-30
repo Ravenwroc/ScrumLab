@@ -79,6 +79,8 @@ userInfo.addEventListener("click", function () {
 })
 checkName();
 
+//Task #9.1 - remove recipes (Agata)
+
 
     let btnAll = document.querySelectorAll(".btn__trash");
     console.log(btnAll);
