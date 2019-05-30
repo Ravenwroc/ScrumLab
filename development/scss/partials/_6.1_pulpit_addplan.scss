@@ -1,6 +1,7 @@
 .addplan__container {
   width: 1000px;
   height: 600px;
+  display: none;
   border: 2px solid lighten($sidePanelNavColor, 40%);
   margin: 0 auto;
   background-color: white;

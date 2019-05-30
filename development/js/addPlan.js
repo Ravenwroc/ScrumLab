@@ -1,5 +1,14 @@
 let savePlanBtn = document.querySelector(".btn_save");
 let addContainer = document.querySelector(".addplan__container");
+let addBtn = document.querySelector(".btn_addPlan");
+let mainView = document.querySelector(".mainApp");
+
+addBtn.addEventListener("click", function(){
+  let addPlanView = document.querySelector(".addplan__container");
+
+  addPlanView.style.display = "block";
+  mainView.style.display = "none";
+})
 
 let newPlan = {
   title: "",
@@ -18,6 +27,7 @@ savePlanBtn.addEventListener("click", function storeName() {
 
     if (titlePlan.length > 0 && descriptionPlan.length > 0 && weekPlan.length > 0) {
         addContainer.style.display = "none";
+        mainView.style.display = "block";
         newPlan.title = titlePlan;
         newPlan.description = descriptionPlan;
         newPlan.number = weekPlan;
