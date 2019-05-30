@@ -144,14 +144,24 @@ addRecipeButton.addEventListener('click' ,function () {
             editInstructionButton.addEventListener('click', function () {
                 console.log('KLIK');
                 // let editSpace = document.createElement()
-                let inputValue = this.parentElement.querySelector('span').innerText;
-                console.log(inputValue);
-                this.parentElement.innerHTML = `<input type="text"><i class="recipe-partials-container__edit-icon--edit-mode fas fa-edit"></i>`;
+                let inputArea = this.parentElement.querySelector('span');
+                let inputValue = inputArea.innerText;
+                console.log(inputValue, inputArea);
+                inputArea.innerHTML = `<input type="text" value="${inputValue}"><i class="recipe-partials-container__edit-icon--edit-mode fas fa-edit"></i>`;
+                this.classList.toggle('hidden');
+                deleteInstructionButton.classList.toggle('hidden')
 
                 let editModebutton = this.parentElement.querySelector('.recipe-partials-container__edit-icon--edit-mode');
 
                 editModebutton.addEventListener('click', function () {
-
+                    let editedInput = inputArea.querySelector('input').value;
+                    console.log(editedInput);
+                     inputArea.innerHTML = null;
+                    console.log(inputArea);
+                    console.log(inputArea.parentElement);
+                    inputArea.innerText = editedInput;
+                    editInstructionButton.classList.toggle('hidden');
+                    deleteInstructionButton.classList.toggle('hidden')
                 })
 
 
