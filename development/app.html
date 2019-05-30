@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pl">
-<<<<<<< HEAD
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -47,14 +46,14 @@
                 <p>Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)</p>
             </form>
         </section>
+
         <section class="dashboard">
             <div class="dashboardHeader">
                 <div class="dashboardButtons">
-                    <a href="./addplan.html">
-                        <button class="btn_addPlan"><i class="far fa-plus-square"></i>
-                            <p>dodaj plan</p>
-                        </button>
-                    </a>
+                  <button class="btn_addPlan">
+                    <i class="far fa-plus-square"></i>
+                    <p>dodaj plan</p>
+                  </button>
                 </div>
                 <div class='notifications-container'>
                     <div class="notifications-container_element information">
@@ -143,11 +142,344 @@
                 </div>
             </div>
         </section>
-    </section>
 
+<!--  DODAWANIE PLANÓW  -->
 
-</main>
+        <section>
 
-<script src="./js/app.js"></script>
-  </body>
+            <div class="addplan__container">
+              <div class="addplan__element_first">
+                <span><h1>NOWY PLAN</h1></span>
+                <button class="btn_save"><p>Zapisz i zamknij</p></button>
+              </div>
+
+              <div class="addplan__element_second">
+                <form class="title_plan">
+                  <div><label>Nazwa Planu</label> <input class="plan_title" type="text" name="plan" size="88" /></div>
+                  <div><label>Opis Planu</label><textarea class="plan_description" name="description" cols="100" rows="5"></textarea></div>
+                  <div class="lab_week"><label>Numer Tygodnia</label> <input class="inp_week" type="number" name="week" min="0" max="52" /></div>
+                </form>
+              </div>
+
+              <div class="addplan__element_third">
+                <table>
+                  <tr>
+                    <td></td>
+                    <th>ŚNIADANIE</th>
+                    <th>DRUGIE ŚNIADANIE</th>
+                    <th>ZUPA</th>
+                    <th>DRUGIE DANIE</th>
+                    <th>KOLACJA</th>
+                  </tr>
+                  <tr>
+                    <th>PONIEDZIAŁEK</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>WTOREK</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>ŚRODA</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>CZWARTEK</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>PIĄTEK</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                          <option>Tu wpisz pierwszą możliwość</option>
+                          <option>Tu wpisz drugą możliwość</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>SOBOTA</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>NIEDZIELA</th>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="select">
+                        <select>
+                      		<option>Tu wpisz pierwszą możliwość</option>
+                      		<option>Tu wpisz drugą możliwość</option>
+                      	</select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>            </div>
+          </section>
+        </section>
+
+  </main>
+
+  <script src="./js/app.js"></script>
+  <script src="./js/addPlan.js"></script>
+</body>
 </html>

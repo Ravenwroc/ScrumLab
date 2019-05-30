@@ -74,6 +74,7 @@ userInfo.addEventListener("click", function () {
         location.reload();
     }else{
         location.reload();
+        localStorage.clear();
     }
 
 })

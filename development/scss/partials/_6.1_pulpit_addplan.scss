@@ -1,0 +1,212 @@
+.addplan__container {
+  width: 1000px;
+  height: 600px;
+  display: none;
+  border: 2px solid lighten($sidePanelNavColor, 40%);
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 30px;
+  font-family: "Open Sans", sans-serif;
+
+  .addplan__element_first {
+    width: 90%;
+    height: 10%;
+    margin: 0 auto;
+    border-bottom: 2px solid lighten($sidePanelNavColor, 40%);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+
+    span {
+      // margin-top: 10px;
+      line-height: 40px;
+    }
+
+    .btn_save {
+      width: 150px;
+      height: 30px;
+      background-color: $buttonsColor;
+
+      p {
+        color: white;
+        font-size: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($buttonsColor, 5%);
+      }
+
+      &:active, &:focus {
+        -moz-outline: none;
+        outline: none; /* CSS 3 */
+        ie-dummy: expression(this.hideFocus=true);
+      }
+
+      &:active {
+        border: 1px dotted black;
+      }
+    }
+
+    h1 {
+      color: $buttonsColor;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  .addplan__element_second {
+    height: 200px;
+
+    .title_plan {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+
+    div {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+
+      label, p {
+        font-size: 24px;
+        color: $tableTextColor;
+        font-weight: 300;
+      }
+
+      input {
+        height: 30px;
+        margin-left: 50px;
+        outline: none;
+        color: $tableTextColor;
+        font-size: 13px;
+      }
+
+      .inp_week {
+        text-align: center;
+        width: 40px;
+        height: 40px;
+      }
+
+      span {
+        width: 40px;
+        height: 30px;
+        margin-bottom: 50px;
+        border: 1px solid black;
+      }
+    }
+
+    .plan_description {
+      width: 70%;
+      height: 60px;
+      margin: 5px 0 5px 78px;
+      outline: none;
+      resize: none;
+      color: $tableTextColor;
+      font-size: 13px;
+      vertical-align: top;
+      border: 1px solid lighten($tableTextColor, 20%);
+    }
+  }
+
+  //------------ TABELA ----------------------
+
+.addplan__element_third {
+  width: 90%;
+  margin: 0 auto;
+  // margin-top: 15px;
+
+  table {
+    width: 100%;
+    height: 250px;
+    color: lighten($headerColor, 30%);
+    font-size: 18px;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+
+    tr{
+      td {
+        &:first-child {
+          border: none;
+        }
+      }
+
+      &:last-child {
+        td, th {
+          border-bottom: 1px solid lighten($sidePanelNavColor, 40%);
+        }
+      }
+    }
+
+    select {
+      width: 100%;
+      height: 100%;
+      color: lighten($headerColor, 30%);
+      background: none;
+      border: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      padding: 0 30px 0 10px;
+      text-indent: 5px;
+
+
+      &:active, &:focus {
+        -moz-outline: none;
+        outline: none; /* CSS 3 */
+        e-dummy: expression(this.hideFocus=true);
+      }
+    }
+
+    .select {
+      position: relative;
+      background: #fff;
+      border: 1px solid lighten($headerColor, 30%);
+      border-radius: 5px;
+      height: 25px;
+      width: 90%;
+      cursor: pointer;
+
+      // &:before {
+      //   content: "";
+      //   position: absolute;
+      //   background: #fff;
+      //   top: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   width: 20px;
+      //   border-top-right-radius: 9px;
+      //   border-bottom-right-radius: 9px;
+      //   pointer-events: none;
+      // }
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0;
+        border-color: lighten($headerColor, 30%) transparent transparent transparent;
+        top: 50%;
+        right: 3px;
+        transform: translate(-50%);
+      }
+    }
+
+    td, th {
+      width: 130px;
+      height: 35px;
+      text-align: center;
+      border-top: 1px solid lighten($sidePanelNavColor, 40%);
+    }
+
+  }
+
+}
+
+}
