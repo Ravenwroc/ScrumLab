@@ -16,9 +16,9 @@ let dashboard = document.querySelector(".dashboard");
 
 //links
 
-let desktopLink = document.querySelector(".desktop");
-let recipesLink = document.querySelector(".recipes");
-let plansLink = document.querySelector(".plans");
+let desktopLink = document.querySelector(".desktopLink");
+let recipesLink = document.querySelector(".recipesLink");
+let plansLink = document.querySelector(".plansLink");
 
 
 
@@ -78,6 +78,8 @@ userInfo.addEventListener("click", function () {
 
 })
 checkName();
+
+//Task #9.1 - remove recipes (Agata)
 
 
     let btnAll = document.querySelectorAll(".btn__trash");
