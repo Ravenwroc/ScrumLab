@@ -134,6 +134,7 @@ addRecipeButton.addEventListener('click' ,function () {
 
             let newInstructionElement = document.createElement('li');
             newInstructionElement.innerText = instructionInput.value;
+            newInstructionElement.innerHTML = `${instructionInput.value} <i class="recipe-partials-container__edit-icon fas fa-edit"></i><i class="recipe-partials-container__delete-icon far fa-trash-alt"></i>`;
             instructionsList.appendChild(newInstructionElement);
             instructionInput.value = '';
 

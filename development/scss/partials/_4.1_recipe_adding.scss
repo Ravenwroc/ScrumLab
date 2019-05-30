@@ -2,6 +2,15 @@
   display: none;
 }
 
+
+
+
+
+
+
+
+
+
 .add-recipe-form {
   background-color: $screensBackgroundColor;
   border: 1px dashed rgb(161, 161, 148);
@@ -67,6 +76,20 @@
     .recipe-partials-container{
       min-width: 48%;
       position: relative;
+
+      .recipe-partials-container__edit-icon, .recipe-partials-container__delete-icon{
+        font-size: 18px;
+        margin: 0 3px;
+      }
+
+      .recipe-partials-container__edit-icon{
+        color: rgba(249, 156, 0, 0.69);
+        margin-left: 10px;
+      }
+
+      .recipe-partials-container__delete-icon{
+        color: rgba(182, 0, 0, 0.75);
+      }
 
       .recipe-partials-container__header{
         color: $tableTextColor;
