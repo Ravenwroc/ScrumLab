@@ -13,7 +13,6 @@ let dashboard = document.querySelector(".dashboard");
 
 
 
-
 //links
 
 let desktopLink = document.querySelector(".desktopLink");
@@ -83,9 +82,9 @@ checkName();
 
 
     let btnAll = document.querySelectorAll(".btn__trash");
-    console.log(btnAll);
+    //console.log(btnAll);
     let tableList = document.querySelector(".recipes__content");
-    console.log(tableList);
+    //console.log(tableList);
 
     btnAll.forEach(function(element) {
 
@@ -101,30 +100,43 @@ checkName();
 let exitButton1 = document.querySelectorAll('.exit_notification')[0];
 let exitButton2 = document.querySelectorAll('.exit_notification')[1];
 let exitButton3 = document.querySelectorAll('.exit_notification')[2];
-//console.log(exitButton1);
-let parent = document.querySelector('.notifications-container');
-//console.log(parent);
-let children = document.querySelectorAll('.notifications-container_element');
-//console.log(children);
+// console.log(exitButton1);
+let notificationContainer = document.querySelector('.notifications-container');
+//console.log(notificationContainer);
+let notificationElement = document.querySelectorAll('.notifications-container_element');
+
 
 exitButton1.addEventListener('click', function(){
-    parent.removeChild(children[0]);
+    notificationContainer.removeChild(notificationElement[0]);
 })
 
 exitButton2.addEventListener('click', function(){
-    parent.removeChild(children[1]);
+    notificationContainer.removeChild(notificationElement[1]);
 })
 
 exitButton3.addEventListener('click', function(){
-    parent.removeChild(children[2]);
+    notificationContainer.removeChild(notificationElement[2]);
 })
 
+//Notification counter
 let notificationCounter = document.querySelector('#notification_counter');
-console.log(notificationCounter);
-
+//console.log(notificationCounter);
 let recipesLS = localStorage.getItem('recipesLocalStorage');
 let recipes = recipesLS;
 notificationCounter.innerText = recipes;
+//
+
+let notificationText = document.querySelectorAll('.notification_text');
+console.log(notificationText[0]);
+
+function notification(type,text) {
+    if (type == 'warning') {
+        notificationText[1].innerText = text;
+    } else if (type == 'success') {
+        notificationText[2].innerText = text;
+    }
+}
+
 
 
 })

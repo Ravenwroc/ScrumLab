@@ -1,16 +1,17 @@
 .container {
   display: flex;
-  width: 1000px;
-  height: auto;
+  width: 100%;
   padding: 100px;
-  font-family: open_sans;
+  font-family: 'Open-sans', sans-serif;
   font-size: 14px;
+  background-color: rgb(235, 235, 235);
   .zdjecie {
     width: 400px;
-    height: auto;
+    height: 200px;
     background-color: gray;
   }
   .opis {
+    padding-top:50px;
     padding-left: 40px;
   }
 }

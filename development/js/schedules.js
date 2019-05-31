@@ -47,3 +47,30 @@ btnAll.forEach(function(element) {
 
     })
 })
+
+// edit plan
+
+let editButton = document.querySelectorAll('.btn_edit');
+console.log(editButton)
+
+// let ulSchedule = document.getElementsByClassName('description');
+let ulSchedule = document.getElementsByClassName('description');
+console.log(ulSchedule);
+
+    editButton.forEach(function(element) {
+        element.addEventListener('click', function(){
+            for (let i = 1 ; i < ulSchedule.length; i +=1 ) {
+                let editable = ulSchedule[i].getAttribute('contenteditable');
+                if (editable == 'true') {
+                    ulSchedule[i].setAttribute('contenteditable', 'false');
+                } else {
+                    ulSchedule[i].setAttribute('contenteditable', 'true');
+                }
+            }
+        })
+    })
+
+
+
+
+

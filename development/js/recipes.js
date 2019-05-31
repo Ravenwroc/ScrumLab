@@ -49,8 +49,8 @@ checkName();
         })
     })
 
-
+// getting info how many recipes we have and pushing into 'information' widget
     let recipesAmount = document.querySelectorAll('.recipes__box--id');
-    console.log(recipesAmount);
+    //console.log(recipesAmount);
     let recipesNumber = (recipesAmount.length-1);
     localStorage.setItem("recipesLocalStorage", recipesNumber);
