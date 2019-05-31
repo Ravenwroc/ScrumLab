@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   let btnAll = document.querySelectorAll(".btn__trash");
-  console.log(btnAll);
+
   let tableList = document.querySelector(".recipes__content");
-  console.log(tableList);
+
 
   btnAll.forEach(function (element) {
 
@@ -93,22 +93,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //------------------------------------------
 
 let addRecipeButton = document.querySelector('.btn-add-Recipe');
-console.log(addRecipeButton);
+
 
 let elementsInContainer = document.querySelectorAll('.content-container> *:not(.add-recipe-form)');
-console.log(elementsInContainer);
+
 
 let newRecipeForm = document.querySelector('.add-recipe-form');
 let addInstructionButton = document.querySelector('.submit-instruction');
 let addIngredientsButton = document.querySelector('.submit-ingredients');
-console.log(addIngredientsButton);
 let instructionsList = document.querySelector('.recipe-instruction-container__instruction-list');
-console.log(instructionsList);
 let ingredientsList = document.querySelector('.recipe-ingredients-container__ingredients-list');
-console.log(ingredientsList);
 
 addRecipeButton.addEventListener('click', function () {
-  console.log('hello');
 
   // ukrywa zawartosc kontenera i pokazuje recipe form
 
@@ -123,7 +119,6 @@ addRecipeButton.addEventListener('click', function () {
   addInstructionButton.addEventListener('click', function () {
 
     let instructionInput = document.querySelector('.recipe-partials-container__instructions-input');
-    console.log(instructionInput);
 
     if (instructionInput.value.length > 0 && instructionsList.children.length < 10) {
 
@@ -143,12 +138,10 @@ addRecipeButton.addEventListener('click', function () {
       // dodanie funkcjonalnosci przyciskowi edytowania
 
       editInstructionButton.addEventListener('click', function () {
-        console.log('KLIK');
-        console.log(editInstructionButton);
+
         // let editSpace = document.createElement()
         let inputArea = this.parentElement.parentElement.querySelector('span');
         let inputValue = inputArea.innerText;
-        console.log(inputValue, inputArea);
         inputArea.innerHTML = `<input class="recipe-partials-container__instruction-edited" type="text" value="${inputValue}">`;
         this.classList.toggle('hide');
         deleteInstructionButton.classList.toggle('hide');
@@ -158,10 +151,7 @@ addRecipeButton.addEventListener('click', function () {
 
         saveInstructionButton.addEventListener('click', function () {
           let editedInput = inputArea.querySelector('.recipe-partials-container__instruction-edited').value;
-          console.log(editedInput);
           inputArea.innerHTML = null;
-          console.log(inputArea);
-          console.log(inputArea.parentElement);
           inputArea.innerText = editedInput;
           editInstructionButton.classList.toggle('hide');
           deleteInstructionButton.classList.toggle('hide');
@@ -171,7 +161,6 @@ addRecipeButton.addEventListener('click', function () {
 
 
       deleteInstructionButton.addEventListener('click', function () {
-        console.log('delete');
         this.parentElement.parentElement.remove();
       })
     }
@@ -183,7 +172,6 @@ addRecipeButton.addEventListener('click', function () {
   addIngredientsButton.addEventListener('click', function () {
 
     let ingredientsInput = document.querySelector('.recipe-partials-container__ingredients-input');
-    console.log(ingredientsInput);
 
     if (ingredientsInput.value.length > 0 && instructionsList.children.length < 20) {
 
@@ -200,11 +188,9 @@ addRecipeButton.addEventListener('click', function () {
       let deleteInstructionButton = newIngredientsElement.querySelector('.recipe-partials-container__delete-icon');
       let editInstructionButton = newIngredientsElement.querySelector('.recipe-partials-container__edit-icon');
 
-      console.log(saveInstructionButton, deleteInstructionButton, editInstructionButton);
 
       editInstructionButton.addEventListener('click', function () {
-        console.log('KLIK');
-        console.log(editInstructionButton);
+
         // let editSpace = document.createElement()
         let inputArea = this.parentElement.parentElement.querySelector('span');
         let inputValue = inputArea.innerText;
@@ -218,10 +204,7 @@ addRecipeButton.addEventListener('click', function () {
 
         saveInstructionButton.addEventListener('click', function () {
           let editedInput = inputArea.querySelector('.recipe-partials-container__instruction-edited').value;
-          console.log(editedInput);
           inputArea.innerHTML = null;
-          console.log(inputArea);
-          console.log(inputArea.parentElement);
           inputArea.innerText = editedInput;
           editInstructionButton.classList.toggle('hide');
           deleteInstructionButton.classList.toggle('hide');
@@ -230,13 +213,73 @@ addRecipeButton.addEventListener('click', function () {
       });
 
       deleteInstructionButton.addEventListener('click', function () {
-        console.log('delete');
         this.parentElement.parentElement.remove();
       })
     }
   });
+
+
+
 });
 
+localStorage.setItem('counter', '0');
+
+function RecipeTemplate(name, description, instructions, ingredients){
+  this.name = name;
+  this.description = description;
+  this.instructions = instructions;
+  this.ingredients = ingredients;}
+
+testArray = [];
+
+let submitRecipeButton = document.querySelector('.recipe-form-header__submit');
+submitRecipeButton.addEventListener('click', function () {
+  let recipeNameInput = document.querySelector('.recipe-input-container__input.input-name').value;
+  let recipeDescriptionInput = document.querySelector('.recipe-input-container__input.input-description').value;
+  let recipeInstructionsContainers = document.querySelectorAll('.recipe-instruction-container__instruction-list >li > span');
+  let recipeIngredientsContainers = document.querySelectorAll('.recipe-ingredients-container__ingredients-list >li > span');
+  let recipeInstructionsList = [];
+  let recipeIngredientsList = [];
+
+  recipeInstructionsContainers.forEach(function (element) {
+    recipeInstructionsList.push(element.innerText);
+  });
+  recipeIngredientsContainers.forEach(function (element) {
+    recipeIngredientsList.push(element.innerText);
+  });
+
+  // console.log(recipeNameInput,recipeDescriptionInput,recipeInstructionsList, recipeIngredientsList);
+  // testArray.push(recipeNameInput,recipeDescriptionInput,recipeInstructionsList, recipeIngredientsList);
+  // console.log(testArray);
+  
+  let generatedRecipe = new RecipeTemplate(recipeNameInput, recipeDescriptionInput, recipeInstructionsList, recipeIngredientsList);
+
+  // console.log(generatedRecipe);
+  // console.log(localStorage);
+  //
+
+  counter = parseInt(localStorage.getItem('counter'));
+  // console.log(counter);
+  // console.log(localStorage);
+  localStorage.setItem(`recipe_${counter}`, JSON.stringify(generatedRecipe));
+  counter++;
+  localStorage.setItem('counter', `${counter}`);
+  // console.log(localStorage);
+  
+});
+
+
+//klasa przepisu
+
+
+
+//
+//
+// let emptArray = [];
+// emptArray.push(new RecipeTemplate('imie', 'opis', ['instrukcje'], ['skladniki']));
+// emptArray.push(new RecipeTemplate('imie1', 'opis1', ['instrukcje1'], ['skladniki1']));
+// emptArray.push(new RecipeTemplate('imie2', 'opis2', ['instrukcje2'], ['skladniki2']));
+// // console.log(emptArray);
 
 
 
