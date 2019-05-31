@@ -1,27 +1,37 @@
-* {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+.btn_addRecipe {
+  width: 150px;
+  height: 150px;
+  border: 1px dashed $successMessageColor;
+  margin: 30px 0 0 50px;
+
+  .fa-plus-square {
+    font-size: 60px;
+    font-weight: 100;
+    color: $successMessageColor;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    color: $successMessageColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active, &:focus {
+    -moz-outline: none;
+    outline: none; /* CSS 3 */
+    ie-dummy: expression(this.hideFocus=true);
+  }
+
+  &:active {
+    border: 2px dashed $successMessageColor;
+  }
+
 }
-.container{
-    display: flex;
-    justify-items: center;
-  align-items: center;
-  flex-direction: column;
 
-
-    .przycisk {
-      border: $successMessageColor 10px solid;
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
-      font-size: 180px;
-      color: $successMessageColor;
-      align-items: center;
-
-        }
-
-      }
 
 
 
