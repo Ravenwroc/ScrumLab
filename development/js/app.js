@@ -91,6 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 //------------------------------------------
+if (localStorage.getItem('counter') === null){
+  localStorage.setItem('counter', '0');
+}
+
+
 
 let addRecipeButton = document.querySelector('.btn-add-Recipe');
 
@@ -222,7 +227,7 @@ addRecipeButton.addEventListener('click', function () {
 
 });
 
-localStorage.setItem('counter', '0');
+
 
 function RecipeTemplate(name, description, instructions, ingredients){
   this.name = name;
@@ -231,6 +236,20 @@ function RecipeTemplate(name, description, instructions, ingredients){
   this.ingredients = ingredients;}
 
 testArray = [];
+
+function clearAllInputs() {
+  let instructionsInput = document.querySelector('.recipe-partials-container__instructions-input');
+  let ingredientsInput = document.querySelector('.recipe-partials-container__ingredients-input');
+  let recipeNameInput = document.querySelector('.recipe-input-container__input.input-name');
+  let recipeDescriptionInput = document.querySelector('.recipe-input-container__input.input-description');
+  recipeNameInput.value = '';
+  recipeDescriptionInput.value = '';
+  instructionsInput.value = '';
+  ingredientsInput.value = '';
+  instructionsList.innerHTML = null;
+  ingredientsList.innerHTML = null;
+
+};
 
 let submitRecipeButton = document.querySelector('.recipe-form-header__submit');
 submitRecipeButton.addEventListener('click', function () {
@@ -248,39 +267,22 @@ submitRecipeButton.addEventListener('click', function () {
     recipeIngredientsList.push(element.innerText);
   });
 
-  // console.log(recipeNameInput,recipeDescriptionInput,recipeInstructionsList, recipeIngredientsList);
-  // testArray.push(recipeNameInput,recipeDescriptionInput,recipeInstructionsList, recipeIngredientsList);
-  // console.log(testArray);
-  
   let generatedRecipe = new RecipeTemplate(recipeNameInput, recipeDescriptionInput, recipeInstructionsList, recipeIngredientsList);
 
-  // console.log(generatedRecipe);
-  // console.log(localStorage);
-  //
-
   counter = parseInt(localStorage.getItem('counter'));
-  // console.log(counter);
-  // console.log(localStorage);
   localStorage.setItem(`recipe_${counter}`, JSON.stringify(generatedRecipe));
   counter++;
   localStorage.setItem('counter', `${counter}`);
-  // console.log(localStorage);
+  clearAllInputs();
+  newRecipeForm.classList.toggle('no-display');
+  for (let i = 0; i < elementsInContainer.length; i++) {
+    elementsInContainer[i].classList.toggle('no-display');
+  }
+
+
+
   
 });
-
-
-//klasa przepisu
-
-
-
-//
-//
-// let emptArray = [];
-// emptArray.push(new RecipeTemplate('imie', 'opis', ['instrukcje'], ['skladniki']));
-// emptArray.push(new RecipeTemplate('imie1', 'opis1', ['instrukcje1'], ['skladniki1']));
-// emptArray.push(new RecipeTemplate('imie2', 'opis2', ['instrukcje2'], ['skladniki2']));
-// // console.log(emptArray);
-
 
 
 
