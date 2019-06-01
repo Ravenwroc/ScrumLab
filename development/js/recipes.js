@@ -23,6 +23,7 @@ function checkName() {
         return userInfoname.innerHTML;
     }
 }
+
 userInfo.addEventListener("click", function () {
     if (localStorage.getItem("savedName") != null){
         localStorage.removeItem("savedName");
@@ -35,19 +36,31 @@ userInfo.addEventListener("click", function () {
 checkName();
 
 
-    let btnAll = document.querySelectorAll(".btn__trash");
-    console.log(btnAll);
-    let tableList = document.querySelector(".recipes__content");
-    console.log(tableList);
+//Usuwanie (task 9.1) i edycja przepisu (10.1)
 
-    btnAll.forEach(function(element) {
+
+let btnTrash = document.querySelectorAll(".btn__trash");
+console.log(btnTrash);
+let tableList = document.querySelector(".recipes__content");
+console.log(tableList);
+
+btnTrash.forEach(function(element) {
 
         element.addEventListener("click", function () {
 
             tableList.removeChild(this.parentElement.parentElement);
 
-        })
-    })
+        });
+    });
+
+let todo = document.getElementById("todoList");
+console.log(todo);
+
+let btnEdit = document.querySelectorAll(".btn__edit");
+console.log(btnEdit);
+
+//podłączyć usunięcie do LS
+
 
 
     let recipesAmount = document.querySelectorAll('.recipes__box--id');
