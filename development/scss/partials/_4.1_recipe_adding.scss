@@ -1,0 +1,198 @@
+.no-display, .no-display * {
+  display: none !important;
+
+}
+
+
+.add-recipe-form {
+  background-color: $screensBackgroundColor;
+  border: 1px dashed rgb(161, 161, 148);
+  width: 80%;
+  margin: 30px;
+  padding: 20px;
+  font-family: open_sans, sans-serif;
+
+  .hide{
+    display: none;
+  }
+
+  .recipe-form-header {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid rgb(203, 203, 203);
+    font-weight: bold;
+    margin-bottom: 5px;
+
+    .recipe-form-header__title {
+      color: $buttonsColor;
+    }
+
+    .recipe-form-header__submit {
+      text-decoration: none;
+      padding: 5px 10px;
+      background-color: $buttonsColor;
+      color: white;
+      margin-bottom: 5px;
+    }
+  }
+
+  .recipe-form-description {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .recipe-input-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      padding: 0 50px 0 5px;
+      font-size: 20px;
+      color: $tableTextColor;
+
+      .recipe-input-container__label {
+        //min-width: 30%;
+      }
+      .recipe-input-container__input {
+        min-width: 75%;
+        border: 1px solid rgb(200, 200, 200);
+        color: $headerColor;
+        resize: none;
+
+      }
+    }
+  }
+  .recipe-build{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+
+    .recipe-partials-container{
+      width: 48%;
+      position: relative;
+
+
+      .recipe-instruction-container__instruction-list, .recipe-ingredients-container__ingredients-list {
+        font-size: 16px;
+        color: $tableTextColor;
+        padding-left: 20px;
+        margin: 10px 0;
+        max-height: 200px;
+        overflow-y: scroll;
+        & li{
+          margin: 5px 0;
+          width: 85%;
+
+          span{
+            overflow-wrap: break-word;
+          }
+          div{
+            display: inline-block;
+          }
+        }
+      }
+
+      .recipe-partials-container__edit-icon, .recipe-partials-container__delete-icon, .recipe-partials-container__edit-icon--edit-mode{
+        font-size: 16px;
+        margin: 0 3px;
+        cursor: pointer;
+      }
+
+      .recipe-partials-container__edit-icon{
+        color: rgba(249, 156, 0, 0.69);
+        margin-left: 10px;
+      }
+
+      .recipe-partials-container__edit-icon--edit-mode{
+        //color: rgba(249, 156, 0, 0.69);
+        color: blue;
+        margin-left: 10px;
+      }
+
+      .recipe-partials-container__delete-icon{
+        color: rgba(182, 0, 0, 0.75);
+      }
+
+      .recipe-partials-container__header{
+        color: $tableTextColor;
+        font-weight: normal;
+        border-bottom: 2px solid rgb(203, 203, 203);
+        margin-bottom: 5px;
+
+      }
+      .recipe-partials-container__submit{
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        font-size: 25px;
+        color: $successMessageColor;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .recipe-partials-container__instructions-input ,.recipe-partials-container__ingredients-input, {
+        font-family: open_sans, sans-serif;
+        color: $tableTextColor;
+        min-width: 92%;
+        border: 1px solid #c8c8c8;
+      }
+      .recipe-partials-container__instruction-edited{
+        font-family: open_sans, sans-serif;
+        color: $tableTextColor;
+        width: 85%;
+        border: 1px solid #c8c8c8;
+      }
+      .recipe-partials-container__instructions-input{
+        resize: none;
+      }
+    }
+  }
+}
+
+
+
+//<!--Button add recipe-->
+
+.extraStuff{
+  display: inline-block;
+}
+
+.btn-add-Recipe {
+  width: 150px;
+  height: 150px;
+  border: 1px dashed $successMessageColor;
+  margin: 30px 0 0 50px;
+
+  .btn-add-Recipe__icon {
+    font-size: 60px;
+    font-weight: 100;
+    color: $successMessageColor;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    color: $successMessageColor;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active, &:focus {
+    -moz-outline: none;
+    outline: none; /* CSS 3 */
+    ie-dummy: expression(this.hideFocus=true);
+  }
+
+  &:active {
+    border: 2px dashed $successMessageColor;
+  }
+
+}
+
+
+

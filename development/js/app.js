@@ -122,10 +122,10 @@ exitButton3.addEventListener('click', function(){
 
 let notificationCounter = document.querySelector('#notification_counter');
 console.log(notificationCounter);
-
-let recipesLS = localStorage.getItem('recipesLocalStorage');
-let recipes = recipesLS;
-notificationCounter.innerText = recipes;
+//
+// let recipesLS = localStorage.getItem('recipesLocalStorage');
+// let recipes = recipesLS;
+// notificationCounter.innerText = recipes;
 
 
 })
