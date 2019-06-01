@@ -4,6 +4,28 @@ let addBtn = document.querySelector(".btn_addPlan");
 let mainView = document.querySelector(".dashboard");
 let weekPlan = document.querySelector(".inp_week").value;
 
+function renderAllRecipes() {
+  var allRecipes = JSON.parse(localStorage.getItem("plans"));
+  var newList = document.getElementsByClassName("addSelect");
+
+  allRecipes.forEach(function(singleRecipe) {
+    for(var i=0; i < newList.length; i++) {
+        var newLi = document.createElement("option");
+        newLi.innerHTML = singleRecipe.title;
+        newList[i].appendChild(newLi);
+    }
+  });
+}
+
+// function allSelect() {
+//   var newSel= document.querySelectorAll("select");
+//   newSel.forEach(function(element){
+//     newSel.renderAllRecipes(element);
+//   });
+// }
+
+renderAllRecipes();
+
 addBtn.addEventListener("click", function(){
   let addPlanView = document.querySelector(".addplan__container");
 
